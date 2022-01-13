@@ -18,7 +18,7 @@
       navigator.mediaDevices.getUserMedia({audio:true})
       .then(stream => {
           //console.log(stream)
-          const mediaRecorder = new mediaRecorder(stream,{MimeType: 'audio/webm'})
+          const mediaRecorder = new MediaRecorder(stream,{MimeType: 'audio/webm'})
 
           const socket = new WebSocket(DG_ENDPOINT,['token','api key paste here'])
           socket.onopen = () => {
